@@ -30,49 +30,55 @@ class MyCardWidget extends StatelessWidget {
       child: ListView.builder(
         
         itemCount: datalist.length,
-        itemBuilder:(context, index) =>  Card( 
-           
-                shape: RoundedRectangleBorder(  
-                  borderRadius: BorderRadius.circular(15.0),  
-                ),  
-                color: Colors.cyan,  
-                elevation: 10,  
-                child: Column(  
-                  mainAxisSize: MainAxisSize.min,  
-                  children: <Widget>[  
-                    ListTile(                
-                      leading: CircleAvatar(                 
-                        child: Container(  
-                          decoration: BoxDecoration(
-                           borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                            image: AssetImage(datalist[index].images), fit: BoxFit.cover,
-                            
-                              )
-                           ),
-                        ),
-                      ),  
-                      title:  Text(  
-                        datalist[index].name,  
-                        style: TextStyle(fontSize: 20.0),),
-                        subtitle: Row(
-                          children: [
-                            Text(  
-                            'email:-umangshriwas17@gmail.com', 
-                            style: TextStyle(fontSize: 16.0)  
+        itemBuilder:(context, index) =>  Container(
+          height: 300,
+          width: 500,
+          child: Card( 
+                  shape: RoundedRectangleBorder(  
+                    borderRadius: BorderRadius.circular(15.0),  
+                  ),  
+                  color: Colors.cyan,  
+                  elevation: 10,  
+                  child: Column(  
+                    mainAxisSize: MainAxisSize.min,  
+                    children: <Widget>[  
+                      ListTile(                
+                        leading: CircleAvatar(                 
+                          child: Container(  
+                            decoration: BoxDecoration(
+                             borderRadius: BorderRadius.circular(100),
+                              image: DecorationImage(
+                              image: NetworkImage(datalist[index].images), fit: BoxFit.cover,
+                              
+                                )
                              ),
-                             Text(  
-                            'contact:-9179577244', 
-                            style: TextStyle(fontSize: 16.0)  
-                             ),
-                             
-                             
-                          ],
-                        ),
-                    ), 
-                  ],  
-                ),  
-              ),)
+                          ),
+                        ),  
+                        title:  Text(  
+                          datalist[index].name,  
+                          style: TextStyle(fontSize: 20.0),),
+                          subtitle: Column(
+                            children: [
+                              Text(  
+                              'email:-\numangshriwas17@gmail.com', 
+                              style: TextStyle(fontSize: 16.0)  
+                               ),
+                               SizedBox(
+                                height: 20,
+                               ),
+                               Text(  
+                              'contact:-\n9179577244', 
+                              style: TextStyle(fontSize: 16.0)  
+                               ),
+                               
+                               
+                            ],
+                          ),
+                      ), 
+                    ],  
+                  ),  
+                ),
+        ),)
     );  
   }  
 } 

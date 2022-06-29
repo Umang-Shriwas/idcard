@@ -9,8 +9,8 @@ class MyData{
 
 List<MyData>datalist=[
   MyData("umang","images/id.png"),
-  MyData("Pankaj","images/log.png"),
-  MyData("Suraj","images/register.png"),
+  MyData("Prakhar","images/log.png"),
+  MyData("Suraj","https://avatars.githubusercontent.com/u/73026702?v=4"),
 ] ;
 
 
